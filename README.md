@@ -4,7 +4,16 @@ Generated signing keys for PixelOS (LineageOS-based) builds.
 
 ## Installation
 
-Clone into the ROM tree and symlink so the build system picks it up:
+Via `repo sync` (manifest `snippets/marble.xml` already maps this repo to
+`vendor/custom/signing`):
+
+```bash
+cd <rom-root>
+mkdir -p vendor/lineage-priv
+ln -s ../custom/signing vendor/lineage-priv/keys
+```
+
+Manual clone instead:
 
 ```bash
 cd <rom-root>/vendor
